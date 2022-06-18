@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const ContactStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#ebeff2",
+      backgroundColor: "#080821",
       padding: "96px 48px 96px 48px",
       boxSizing: "border-box",
       [theme.breakpoints.down(840)]: {
@@ -13,7 +13,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       },
     },
     container: {
-      background: "#fff",
+      background: "#12122E",
       borderRadius: "10px",
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       padding: "96px",
@@ -34,7 +34,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       },
     },
     contactTitle: {
-      color: "#000",
+      color: "#fff",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,
@@ -64,7 +64,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       marginBottom: "24px",
     },
     formTitle: {
-      color: "#333",
+      color: "#fff",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 700,
@@ -83,39 +83,14 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       lineHeight: 1.4,
       marginRight: "5px",
     },
-    formInput: {
-      width: "100%",
-      color: "#333333",
-      fontFamily: "Lato",
-      fontSize: "15px",
-      fontWeight: 400,
-      border: "1px solid #eeeeee",
-      borderRadius: "4px",
-      lineHeight: 1.4,
-      letterSpacing: "0.05em",
-      textAlign: "left",
-      padding: "14px 10px",
-      boxShadow: "none",
-      transitionDelay: "400ms",
-      transitionDuration: "1000ms",
-      boxSizing: "border-box",
-      "&::placeholder": {
-        fontFamily: "Lato",
-        fontSize: "15px",
-        fontWeight: 400,
-        lineHeight: 1.4,
-        letterSpacing: "0.05em",
-        color: "#E8E8E8",
-        opacity: 1 /* Firefox */,
-      },
-    },
     formTextarea: {
       width: "100% !important",
-      color: "#333333",
+      color: "#fff",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 400,
-      border: "1px solid #eeeeee",
+      background: "#23233D",
+      border: "1px solid transparent",
       borderRadius: "4px",
       lineHeight: 1.4,
       letterSpacing: "0.05em",
@@ -136,6 +111,12 @@ export const ContactStyles = makeStyles((theme: Theme) =>
         color: "#E8E8E8",
         opacity: 1 /* Firefox */,
       },
+      "&:focus-visible":{
+        outline: "none",
+      },
+      "&:focus":{
+        outline: "none",
+      },
     },
     formBtn: {
       marginTop: "24px",
@@ -145,7 +126,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       display: "flex",
       alignItems: "center",
       width: "100%",
-      color: "#333333",
+      color: "#fff",
       fontFamily: "ヒラギノ角ゴ W3 JIS2004",
       fontSize: "14px",
       lineHeight: 1.4,

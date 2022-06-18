@@ -1,4 +1,7 @@
+/** @format */
+
 import ActionButton from "components/ActionButton/ActionButton";
+import ActionInput from "components/ActionInput/ActionInput";
 import { useState } from "react";
 import { ContactStyles } from "./ContactStyle";
 
@@ -20,22 +23,20 @@ export const Contact = () => {
           <div className={classes.formTitle}>
             お名前 <span className={classes.symbol}>*</span>
           </div>
-          <input
-            className={classes.formInput}
+          <ActionInput
             value={name}
             placeholder='こちらのフォームより承っております'
-            onChange={(e) => setName(e.target.value)}
+            action={(e) => setName(e)}
           />
         </div>
         <div className={classes.contactForm}>
           <div className={classes.formTitle}>
             メールアドレス <span className={classes.symbol}>*</span>
           </div>
-          <input
-            className={classes.formInput}
+          <ActionInput
             value={email}
             placeholder='こちらのフォームより承っております'
-            onChange={(e) => setEmail(e.target.value)}
+            action={(e) => setEmail(e)}
           />
         </div>
         <div className={classes.contactForm}>

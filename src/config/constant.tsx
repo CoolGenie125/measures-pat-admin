@@ -6,101 +6,179 @@ import sidebar4 from "../assets/icons/sidebar-icon4.png";
 export const SidbarData = [
   {
     img: sidebar1,
-    content: "個人向けサービス",
+    content: "アカウント設定",
     router: {
-      show: true,
-      routers: [
-        {
-          name: "食事・美容",
-          link: "/private/healthy",
-        },
-        {
-          name: "ジム・マッサージ",
-          link: "/private/healthy",
-        },
-        {
-          name: "旅行・レジャー",
-          link: "/private/healthy",
-        },
-        {
-          name: "引越し",
-          link: "/private/healthy",
-        },
-        {
-          name: "家事・育児",
-          link: "/private/healthy",
-        },
-        {
-          name: "介護・福祉",
-          link: "/private/healthy",
-        },
-        {
-          name: "その他",
-          link: "/private/healthy",
-        },
-      ],
+      show: false,
+      link: "/account",
     },
   },
   {
     img: sidebar2,
-    content: "会社向けサービス",
+    content: "従業員の権限管理",
     router: {
-      show: true,
-      routers: [
-        {
-          name: "ITツール利用",
-          link: "/private/healthy",
-        },
-        {
-          name: "システム開発",
-          link: "/private/healthy",
-        },
-        {
-          name: "WEB制作",
-          link: "/private/healthy",
-        },
-        {
-          name: "資料作成",
-          link: "/private/healthy",
-        },
-        {
-          name: "士業業務代行",
-          link: "/private/healthy",
-        },
-        {
-          name: "健康診断",
-          link: "/private/healthy",
-        },
-        {
-          name: "その他",
-          link: "/private/healthy",
-        },
-      ],
+      show: false,
+      link: "/list"
     },
   },
   {
     img: sidebar3,
     content: "利用方法",
     router: {
-      show: true,
-      routers: [
-        {
-          name: "利用方法",
-          link: "/usage",
-        },
-        {
-          name: "お問い合わせ",
-          link: "/usage/contact",
-        },
-      ],
+      show: false,
+      link: "/usage",
     },
   },
   {
     img: sidebar4,
-    content: "アカウント",
+    content: "お問い合わせ",
     router: {
       show: false,
-      link: "/account",
+      link: "/inquiry"
     },
+  },
+];
+
+export const clientListArray:any =[
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfasasdfasdfasd",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfasasdf",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfasdd",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+  {
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },{
+    name:"asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: '000-0000-000',
+  },
+
+];
+
+export const cmsListArray:any = [
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
+  },
+  {
+    category: "Web production",
+    price: "150,000 yen",
+    description: "Full-scale homepage/xxx-xxx-xxxxx-xxx",
   },
 ];

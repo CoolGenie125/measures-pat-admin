@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const ErrorRouteStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#ebeff2",
+      backgroundColor: "#080821",
       padding: "96px",
       boxSizing: "border-box",
       [theme.breakpoints.down(840)]: {
