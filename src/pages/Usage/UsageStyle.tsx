@@ -3,14 +3,14 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const UsageStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#ebeff2",
+      backgroundColor: "#080821",
       padding: "48px",
       boxSizing: "border-box",
       transitionDelay: "400ms",
       transitionDuration: "1200ms",
     },
     usageTitle: {
-      color: "#55727e",
+      color: "#ffffff",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,

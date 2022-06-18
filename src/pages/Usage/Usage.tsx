@@ -1,6 +1,3 @@
-import { Grid } from "@material-ui/core";
-import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
-import ServiceCard from "components/ServiceCard/ServiceCard";
 import { UsageCard } from "./component/UsageCard/UsageCard";
 import { UsageStyles } from "./UsageStyle";
 
@@ -16,7 +13,6 @@ export const Usage = () => {
         <UsageCard />
         <UsageCard />
       </div>
-      <Breadcrumbs />
     </>
   );
 };

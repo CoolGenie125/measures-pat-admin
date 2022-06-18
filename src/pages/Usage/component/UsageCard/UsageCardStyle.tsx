@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const UsageCardStyle = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#fff",
+      backgroundColor: "#23233D",
       borderRadius: "10px",
       boxShadow: "30px 40px 30px rgb(0 0 0 / 10%)",
       padding: "48px",
@@ -37,7 +37,7 @@ export const UsageCardStyle = makeStyles((theme: Theme) =>
     des: {
       marginTop: "12px",
       textAlign: "left",
-      color: "#000",
+      color: "#fff",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "16px",
       fontWeight: 700,

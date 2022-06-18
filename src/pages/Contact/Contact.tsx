@@ -1,5 +1,3 @@
-/** @format */
-
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionInput from "components/ActionInput/ActionInput";
 import { useState } from "react";
