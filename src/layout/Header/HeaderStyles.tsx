@@ -14,7 +14,7 @@ export const HeaderStyles = makeStyles((theme: Theme) =>
         justifyContent: "space-between",
         height: "64px",
       },
-      borderBottom: "1px solid #12122E",
+      borderBottom: "1px solid #333353",
     },
     menu: {
       display: "none",

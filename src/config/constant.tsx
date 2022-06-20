@@ -7,125 +7,113 @@ export const SidbarData = [
   {
     img: sidebar1,
     content: "アカウント設定",
-    router: {
-      show: false,
-      link: "/account",
-    },
+    link: "/account",
   },
   {
     img: sidebar2,
     content: "従業員の権限管理",
-    router: {
-      show: false,
-      link: "/list"
-    },
+    link: "/list",
   },
   {
     img: sidebar3,
     content: "利用方法",
-    router: {
-      show: false,
-      link: "/usage",
-    },
+    link: "/usage",
   },
   {
     img: sidebar4,
     content: "お問い合わせ",
-    router: {
-      show: false,
-      link: "/inquiry"
-    },
+    link: "/inquiry",
   },
 ];
 
-export const clientListArray:any =[
+export const clientListArray: any = [
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfasasdfasdfasd",
+    name: "asdfasasdfasdfasd",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfasasdf",
+    name: "asdfasasdf",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfasdd",
+    name: "asdfasdd",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
   {
-    name:"asdfas",
+    name: "asdfas",
     company: "asdfasdf",
     companyemail: "company.name@gmail.com",
     personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
-  },{
-    name:"asdfas",
-    company: "asdfasdf",
-    companyemail: "company.name@gmail.com",
-    personalemail: "geniesake@gmail.com",
-    phone: '000-0000-000',
+    phone: "000-0000-000",
   },
-
+  {
+    name: "asdfas",
+    company: "asdfasdf",
+    companyemail: "company.name@gmail.com",
+    personalemail: "geniesake@gmail.com",
+    phone: "000-0000-000",
+  },
 ];
 
-export const cmsListArray:any = [
+export const cmsListArray: any = [
   {
     category: "Web production",
     price: "150,000 yen",

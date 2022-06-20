@@ -28,6 +28,17 @@ export const useStyles = makeStyles((theme: Theme) =>
         color: "#fff",
       },
     },
+    activeDropDownItem:{
+      padding: "0 20px",
+      fontFamily: "Lato",
+      fontStyle: "normal",
+      fontSeight: 400,
+      fontSize: "14px",
+      lineHeight: "40px",
+      color: "#fff",
+      postion: "relative",
+      cursor: "pointer",
+    },
     displayNone: {
       display: "none",
     },

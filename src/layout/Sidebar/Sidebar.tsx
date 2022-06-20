@@ -3,93 +3,37 @@ import LogoImg from "../../assets/images/logo.webp";
 import avatar from "../../assets/images/avatar.png";
 import banner from "../../assets/images/banner.png";
 import { SidbarData } from "config/constant";
-import { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import MobileSidebar from "./MobileSidebar/MobileSidebar";
 
 interface SidebarProps {
   className?: any;
   mobileStatus: boolean;
-  handleClose: () => void;
+  action: () => void;
 }
 
 export default function Sidebar({
   className,
-  handleClose,
   mobileStatus,
+  action,
 }: SidebarProps) {
   const classes = SidebarStyles();
   const navigate = useNavigate();
-  const [rightPanel, setRightPanel] = useState(false);
-  const [rightRouters, setRightRouters] = useState<any>();
-  const [showStaus, setShowStatus] = useState<boolean>(mobileStatus);
-  const [isHidden, setIsHidden] = useState(false);
-
-  useEffect(() => {
-    setShowStatus(mobileStatus);
-  }, [mobileStatus]);
-
-  const handleLogo = () => {
-    navigate("/");
-  };
-
-  const handleAccount = () => {
-    navigate("/account");
-  };
-
-  const handleRightClose = () => {
-    setRightPanel(false);
-    isHidden && setShowStatus(false);
-  };
-
-  const handleWindowResize = useCallback((event: any) => {
-    if (window.innerWidth > 839) {
-      setIsHidden(false);
-    } else {
-      setIsHidden(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, [handleWindowResize]);
-
-  const handleRighPanel = (e: any) => {
-    if (!e.show) {
-      setRightPanel(false);
-      navigate(e.link);
-    } else {
-      setRightPanel(true);
-      setRightRouters(e.routers);
-    }
-  };
-
-  const handleLink = (e: any) => {
-    setRightPanel(false);
-    isHidden && setShowStatus(false);
-    setRightPanel(false);
-    navigate(e);
-  };
+  const location = useLocation();
 
   return (
     <>
-      <div
-        className={clsx(
-          classes.root,
-          className,
-          !showStaus ? classes.displayNone : classes.displayShow
-        )}>
+      <div className={clsx(classes.root, className)}>
         <img
           src={LogoImg}
           className={classes.logoImg}
           alt='logo'
-          onClick={() => handleLogo()}
+          onClick={() => navigate("/")}
         />
-        <div className={classes.avatarRoot} onClick={() => handleAccount()}>
+        <div
+          className={classes.avatarRoot}
+          onClick={() => navigate("/account")}>
           <img src={avatar} className={classes.avatarImg} />
           <div className={classes.avatarName}>しさく くらら</div>
           <div className={classes.avatarJob}>合同会社施策ぱっと</div>
@@ -98,9 +42,13 @@ export default function Sidebar({
           {SidbarData.map((item: any, key: any) => {
             return (
               <div
-                className={classes.sidebarItem}
+                className={
+                  location.pathname === item.link
+                    ? classes.activeSidebarItem
+                    : classes.sidebarItem
+                }
                 key={key}
-                onClick={() => handleRighPanel(item.router)}>
+                onClick={() => navigate(item.link)}>
                 <img
                   src={item.img}
                   className={classes.itemImg}
@@ -114,52 +62,11 @@ export default function Sidebar({
             );
           })}
         </div>
-      </div>
-      <div
-        className={showStaus ? classes.closePart : classes.displayNone}
-        onClick={handleClose}>
-        <div className={classes.closeRootIcon}>
-          <i className='fal fa-times'></i>
+        <div className={classes.studyLink}>
+          <img src={banner} className={classes.banner}></img>
         </div>
       </div>
-      <div className={classes.studyLink}>
-        <img src={banner} className={classes.banner}></img>
-      </div>
-      {rightPanel ? (
-        <>
-          <div className={classes.sidebarRight}>
-            <div className={classes.rightHeader}>
-              <div
-                className={classes.closeIcon}
-                onClick={() => setRightPanel(false)}>
-                <i className='fal fa-times'></i>
-              </div>
-            </div>
-            <div className={classes.rightContont}>
-              {rightRouters?.map((item: any, key: any) => {
-                return (
-                  <div
-                    className={classes.rightItem}
-                    key={key}
-                    onClick={() => handleLink(item?.link)}>
-                    <div className={classes.rightArrow}>
-                      <i className='far fa-arrow-right'></i>
-                    </div>
-                    <div className={classes.rightItemContent}>{item?.name}</div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className={classes.closeRightPart} onClick={handleRightClose}>
-            <div className={classes.closeRightRootIcon}>
-              <i className='fal fa-times'></i>
-            </div>
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
+      <MobileSidebar mobileStatus={mobileStatus} moblieClose={action} />
     </>
   );
 }

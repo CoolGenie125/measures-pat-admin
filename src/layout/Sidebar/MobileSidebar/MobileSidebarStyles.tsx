@@ -1,22 +1,21 @@
-/** @format */
-
 import { createStyles, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-export const SidebarStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      display: "none",
       position: "fixed",
       textAlign: "center",
       width: "300px",
       boxSizing: "border-box",
       background: "#080821",
       padding: "48px 12px 48px 12px",
-      borderRight: "1px solid #333353",
       height: "100%",
       zIndex: 2,
       transition: ".3s cubic-bezier(.4,.4,0,1)",
       [theme.breakpoints.down(840)]: {
-        display: "none",
+        display: "unset",
+        width: "50%",
       },
     },
     logoImg: {
@@ -65,14 +64,14 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "16px",
       marginTop: "12px",
     },
-    sidebarContent: {
+    mobileSidebarContent: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       background: "#12122E",
       borderRadius: "15px",
     },
-    sidebarItem: {
+    mobileSidebarItem: {
       width: "100%",
       display: "flex",
       alignItems: "center",
@@ -82,19 +81,8 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       margin: "0 12px",
       cursor: "pointer",
       "&:hover": {
-        background: "#23233D",
+        background: "#21263F",
       },
-    },
-    activeSidebarItem: {
-      width: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "71px",
-      transition: ".3s cubic-bezier(.4,.4,0,1)",
-      margin: "0 12px",
-      cursor: "pointer",
-      background: "#23233D",
     },
     itemImg: {
       background: "rgba(0,0,0,0.0)",
@@ -156,6 +144,36 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
     banner: {
       width: "97px",
       height: "19px",
+    },
+    closePart: {
+      display: "none",
+      [theme.breakpoints.down(840)]: {
+        left: "50%",
+        width: "50%",
+        position: "fixed",
+        top: 0,
+        height: "100%",
+        display: "flex",
+        justifyContent: "right",
+        padding: "30px",
+        zIndex: 2,
+        backgroundColor: "rgb(0, 0, 0, 0.7)",
+        boxSizing: "border-box",
+      },
+    },
+    closeRootIcon: {
+      cursor: "pointer",
+      "& i": {
+        color: "#fff",
+        fontSize: "35px",
+        lineHeight: "35px",
+      },
+    },
+    displayNone: {
+      display: "none",
+    },
+    displayShow: {
+      display: "unset",
     },
   })
 );

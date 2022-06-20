@@ -56,7 +56,7 @@ const TableContent = ({
               {row.phone}
             </TableCell>
             <TableCell className={clsx(classes.tableCell, classes.action)}>
-              <ActionDropDown>
+              <ActionDropDown inputData={["クライアント", "管理者", "従業員"]}>
                 <div
                   className={clsx(classes.actionIcon, classes.marginRight10)}>
                   <i className='fas fa-user-edit'></i>

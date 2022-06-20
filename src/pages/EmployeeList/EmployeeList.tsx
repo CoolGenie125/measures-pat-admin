@@ -1,19 +1,22 @@
+/** @format */
+
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionTable from "components/Table/ActionTable";
 import { clientListArray } from "config/constant";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AddEmployeeModal from "./Components/AddServiceModal/AddEmployeeModal";
 import TableContent from "./EmployeeListContent/TableContent";
 import { useStyles } from "./EmployeeListStyles";
 
 export const tableHeader = [
   "No",
-  "Name",
-  "Company Name",
-  "Company Email",
-  "Personal Email",
-  "Phone",
-  "Action",
+  "名前",
+  "会社名",
+  "会社のメール",
+  "個人的なメール",
+  "電話",
+  "アクション",
 ];
 
 export const EmployeeList = () => {
@@ -32,6 +35,12 @@ export const EmployeeList = () => {
     setPerPage(rows);
     setCurrentPage(0);
   };
+  //--------------add item modal function---------------------------
+  const [addStatus, setAddStatus] = useState(false);
+
+  const handleAddItem = (e: any) => {
+    console.log("input value", e);
+  };
 
   return (
     <div className={classes.root}>
@@ -39,6 +48,12 @@ export const EmployeeList = () => {
         <div className={classes.clientListTitle}>クライアント 一覧</div>
         <div className={classes.clientListSmallTitle}>
           それはあなたのサービスを受け入れるクライアントのリストです。
+        </div>
+        <div className={classes.tableTool}>
+          <div className={classes.addBtn} onClick={() => setAddStatus(true)}>
+            サービス追加
+            <i className='fas fa-plus'></i>
+          </div>
         </div>
         <ActionTable
           className={classes.tableRoot}
@@ -63,6 +78,11 @@ export const EmployeeList = () => {
           action={() => navigate("/")}
         />
       </div>
+      <AddEmployeeModal
+        show={addStatus}
+        onClose={() => setAddStatus(false)}
+        action={(e) => handleAddItem(e)}
+      />
     </div>
   );
 };
