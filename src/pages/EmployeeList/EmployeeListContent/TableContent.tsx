@@ -76,13 +76,13 @@ const TableContent = ({
   return (
     <>
       {rows?.length === 0 || rows === null ? (
-        <div className={classes.emptyTable}>データなし</div>
+        <div className={classes.emptyTable}>従業員アカウントを削除する</div>
       ) : (
         <TableRoot columns={columns} rows={tableRows} />
       )}
       <ConfirmModal
         title='ユーザーアカウントを削除する'
-        description='このユーザーアカウントを本当に削除しますか？'
+        description='この従業員アカウントを削除してもよろしいですか？'
         show={deleteModalStatus}
         onClose={handleConfirmModalClose}
         action={() => {}}

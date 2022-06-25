@@ -1,5 +1,3 @@
-/** @format */
-
 import { createStyles, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 export const SidebarStyles = makeStyles((theme: Theme) =>
@@ -11,7 +9,6 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       boxSizing: "border-box",
       background: "#080821",
       padding: "48px 12px 48px 12px",
-      borderRight: "1px solid #333353",
       height: "100%",
       zIndex: 2,
       transition: ".3s cubic-bezier(.4,.4,0,1)",

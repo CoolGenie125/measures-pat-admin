@@ -78,10 +78,10 @@ export default function AddEmployeeModal({
         className={showStatus ? classes.loaderWrapper : classes.displayNone}
         ref={rootRef}>
         <div className={classes.modalRoot} ref={contentRef}>
-          <div className={classes.title}>サービス追加</div>
+          <div className={classes.title}>従業員追加</div>
           <div className={classes.mainContainer}>
             <div className={classes.descContainer}>
-              以下の入力を正確に記入してください
+            次のフォームに正しく記入してください
             </div>
             <div className={classes.imgLoaderRoot}>
               <div className={classes.imgLoader} onClick={handleFileInput}>
@@ -104,7 +104,7 @@ export default function AddEmployeeModal({
                   />
                 ) : (
                   <div className={classes.importLetter}>
-                    サービス画像を選択してください
+                    従業員の写真を選択してください
                   </div>
                 )}
               </div>

@@ -1,5 +1,3 @@
-/** @format */
-
 import { useNavigate } from "react-router-dom";
 import { UsageCard } from "./component/UsageCard/UsageCard";
 import { UsageStyles } from "./UsageStyle";

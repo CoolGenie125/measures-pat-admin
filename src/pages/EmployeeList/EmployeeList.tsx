@@ -1,5 +1,3 @@
-/** @format */
-
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionTable from "components/Table/ActionTable";
 import { clientListArray } from "config/constant";
@@ -45,13 +43,13 @@ export const EmployeeList = () => {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <div className={classes.clientListTitle}>クライアント 一覧</div>
+        <div className={classes.clientListTitle}>従業員リスト</div>
         <div className={classes.clientListSmallTitle}>
-          それはあなたのサービスを受け入れるクライアントのリストです。
+          以下は従業員のリストです。
         </div>
         <div className={classes.tableTool}>
           <div className={classes.addBtn} onClick={() => setAddStatus(true)}>
-            サービス追加
+            従業員追加
             <i className='fas fa-plus'></i>
           </div>
         </div>
@@ -71,12 +69,12 @@ export const EmployeeList = () => {
             />
           }
         />
-        <ActionButton
+        {/* <ActionButton
           className={classes.backHomeBtn}
           type='dark'
           content='HOME へ戻る'
           action={() => navigate("/")}
-        />
+        /> */}
       </div>
       <AddEmployeeModal
         show={addStatus}

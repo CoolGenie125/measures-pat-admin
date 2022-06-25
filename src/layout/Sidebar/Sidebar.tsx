@@ -22,6 +22,13 @@ export default function Sidebar({
   const navigate = useNavigate();
   const location = useLocation();
 
+  const handleStudyLink = () => {
+    window.open(
+      "https://studio.design/?utm_source=demo-shisaku-pad.studio.site%2F&utm_medium=STUDIO%20Banner&utm_campaign=STUDIO%20Banner",
+      "_blank"
+    );
+  };
+
   return (
     <>
       <div className={clsx(classes.root, className)}>
@@ -62,7 +69,7 @@ export default function Sidebar({
             );
           })}
         </div>
-        <div className={classes.studyLink}>
+        <div className={classes.studyLink} onClick={handleStudyLink}>
           <img src={banner} className={classes.banner}></img>
         </div>
       </div>
