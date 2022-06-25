@@ -69,12 +69,6 @@ export const EmployeeList = () => {
             />
           }
         />
-        {/* <ActionButton
-          className={classes.backHomeBtn}
-          type='dark'
-          content='HOME へ戻る'
-          action={() => navigate("/")}
-        /> */}
       </div>
       <AddEmployeeModal
         show={addStatus}

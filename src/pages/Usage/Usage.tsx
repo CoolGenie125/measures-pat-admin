@@ -13,7 +13,7 @@ export const Usage = () => {
           <div
             className={classes.addBtn}
             onClick={() => navigate("/usage/add")}>
-            サービス追加
+            使い方を追加
             <i className='fas fa-plus'></i>
           </div>
         </div>

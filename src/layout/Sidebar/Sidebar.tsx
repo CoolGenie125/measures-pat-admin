@@ -69,9 +69,9 @@ export default function Sidebar({
             );
           })}
         </div>
-        <div className={classes.studyLink} onClick={handleStudyLink}>
-          <img src={banner} className={classes.banner}></img>
-        </div>
+      </div>
+      <div className={classes.studyLink} onClick={handleStudyLink}>
+        <img src={banner} className={classes.banner}></img>
       </div>
       <MobileSidebar mobileStatus={mobileStatus} moblieClose={action} />
     </>
