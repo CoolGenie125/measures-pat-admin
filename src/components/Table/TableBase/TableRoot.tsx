@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
         padding: "0px",
         marginBottom: "20px",
         "& .MuiTableRow-root": {
-          borderBottom: "solid 1px #282E4E",
+          borderBottom: "solid 1px #F2F5F7",
         },
         "& .MuiTableBody-root .MuiTableRow-root:last-child": {
           borderBottom: "solid 1px transparent",
@@ -56,8 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "14px",
       lineHeight: "17px",
       fontWeight: 400,
-      color: "#96A1DB",
-      opacity: "50%",
+      color: "#000",
       fontFamily: "Lato",
       "&.MuiTableCell-root": {
         padding: "10px 10px 10px 20px",
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
     tableCell: {
       fontSize: "16px",
       fontFamily: "Lato",
-      color: "white",
+      color: "#333",
       fontWeight: "normal",
     },
     center: {},

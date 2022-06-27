@@ -3,14 +3,14 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const UsageStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#080821",
+      backgroundColor: "#F5E4E2",
       padding: "48px",
       boxSizing: "border-box",
       transitionDelay: "400ms",
       transitionDuration: "1200ms",
     },
     usageTitle: {
-      color: "#ffffff",
+      color: "#E57461",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,
@@ -34,7 +34,7 @@ export const UsageStyles = makeStyles((theme: Theme) =>
     addBtn: {
       cursor: "pointer",
       width: "fit-content",
-      color: "#fff",
+      color: "#000",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "18px",
       fontWeight: 600,
@@ -44,7 +44,7 @@ export const UsageStyles = makeStyles((theme: Theme) =>
         marginLeft: "10px",
         fontSize: "18px",
         lineHeight: "18px",
-        color: "#fff",
+        color: "#000",
       },
       "&:hover": {
         opacity: 0.5,

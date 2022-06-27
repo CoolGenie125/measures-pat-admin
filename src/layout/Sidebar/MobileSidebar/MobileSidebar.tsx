@@ -1,9 +1,9 @@
 import { useStyles } from "./MobileSidebarStyles";
-import LogoImg from "../../../assets/images/logo.webp";
+import LogoImg from "../../../assets/images/logo.png";
 import avatar from "../../../assets/images/avatar.png";
 import banner from "../../../assets/images/banner.png";
 import { SidbarData } from "config/constant";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
 interface MobileSidebarContentProps {
@@ -19,6 +19,7 @@ export default function MobileSidebarContent({
 }: MobileSidebarContentProps) {
   const classes = useStyles();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLink = (e: any) => {
     moblieClose();
@@ -50,7 +51,11 @@ export default function MobileSidebarContent({
           {SidbarData.map((item: any, key: any) => {
             return (
               <div
-                className={classes.mobileSidebarItem}
+                className={
+                  location.pathname === item.link
+                    ? classes.activeMobileSidebarItem
+                    : classes.mobileSidebarItem
+                }
                 key={key}
                 onClick={() => handleLink(item.link)}>
                 <img

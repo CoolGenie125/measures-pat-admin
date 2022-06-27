@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#080821",
+      backgroundColor: "#F5E4E2",
       padding: "96px 48px 96px 48px",
       boxSizing: "border-box",
       [theme.breakpoints.down(840)]: {
@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     container: {
-      background: "#12122E",
+      background: "#fff",
       borderRadius: "10px",
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       padding: "96px",
@@ -34,7 +34,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     usageAddTitle: {
-      color: "#fff",
+      color: "#E57461",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,
@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginBottom: "24px",
     },
     formTitle: {
-      color: "#fff",
+      color: "#55727e",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 700,
@@ -85,12 +85,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     formTextarea: {
       width: "100% !important",
-      color: "#fff",
+      color: "#333",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 400,
-      background: "#23233D",
-      border: "1px solid transparent",
       borderRadius: "4px",
       lineHeight: 1.4,
       letterSpacing: "0.05em",
@@ -102,6 +100,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       minHeight: "130px",
       resize: "none",
       boxSizing: "border-box",
+      border: "1px solid #eee",
       "&::placeholder": {
         fontFamily: "Lato",
         fontSize: "15px",

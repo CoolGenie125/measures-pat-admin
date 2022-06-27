@@ -4,7 +4,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
   tableCell: {
     fontSize: "16px !important",
     fontFamily: "Lato",
-    color: "white !important",
     lineHeight: "unset",
     fontWeight: "normal",
     "&.MuiTableCell-root": {

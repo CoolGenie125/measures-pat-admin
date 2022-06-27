@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const ContactStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: "#080821",
+      backgroundColor: "#F5E4E2",
       padding: "96px 48px 96px 48px",
       boxSizing: "border-box",
       [theme.breakpoints.down(840)]: {
@@ -13,7 +13,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       },
     },
     container: {
-      background: "#12122E",
+      background: "#fff",
       borderRadius: "10px",
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       padding: "96px",
@@ -34,7 +34,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       },
     },
     contactTitle: {
-      color: "#fff",
+      color: "#E57461",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,
@@ -64,7 +64,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       marginBottom: "24px",
     },
     formTitle: {
-      color: "#fff",
+      color: "#55727e",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 700,
@@ -89,8 +89,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 400,
-      background: "#23233D",
-      border: "1px solid transparent",
+      border: "1px solid #eeeeee",
       borderRadius: "4px",
       lineHeight: 1.4,
       letterSpacing: "0.05em",
@@ -126,7 +125,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       display: "flex",
       alignItems: "center",
       width: "100%",
-      color: "#fff",
+      color: "#000",
       fontFamily: "ヒラギノ角ゴ W3 JIS2004",
       fontSize: "14px",
       lineHeight: 1.4,

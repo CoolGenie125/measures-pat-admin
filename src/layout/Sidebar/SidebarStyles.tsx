@@ -7,7 +7,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       width: "300px",
       boxSizing: "border-box",
-      background: "#080821",
+      background: "#F59B8A",
       padding: "48px 12px 48px 12px",
       height: "100%",
       zIndex: 2,
@@ -53,7 +53,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "16px",
     },
     avatarJob: {
-      color: "#9ab0bc",
+      color: "#fff",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "12px",
       fontWeight: 600,
@@ -61,13 +61,12 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       lineHeight: "1.4",
       height: "16px",
       marginTop: "12px",
+      opacity: 0.5,
     },
     sidebarContent: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      background: "#12122E",
-      borderRadius: "15px",
     },
     sidebarItem: {
       width: "100%",
@@ -78,8 +77,9 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       transition: ".3s cubic-bezier(.4,.4,0,1)",
       margin: "0 12px",
       cursor: "pointer",
+      borderBottom: "1px solid #fff",
       "&:hover": {
-        background: "#23233D",
+        opacity: 0.5,
       },
     },
     activeSidebarItem: {
@@ -91,7 +91,8 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       transition: ".3s cubic-bezier(.4,.4,0,1)",
       margin: "0 12px",
       cursor: "pointer",
-      background: "#23233D",
+      opacity: 0.5,
+      borderBottom: "1px solid #fff",
     },
     itemImg: {
       background: "rgba(0,0,0,0.0)",
@@ -105,7 +106,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       },
     },
     itemContent: {
-      color: "#9ab0bc",
+      color: "#fff",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "16px",
       fontWeight: 600,
@@ -126,7 +127,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
     },
     itemBtn: {
       "& i": {
-        color: "#9ab0bc",
+        color: "#fff",
         fontSize: "24px",
         height: "20px",
         width: "16px",
