@@ -1,6 +1,7 @@
-import { Theme, makeStyles } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
-export const useStyles = makeStyles((theme: Theme) => ({
+export const useStyles = makeStyles((theme: Theme) =>
+createStyles({
   displayNone: {
     display: "none",
   },
@@ -11,7 +12,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
     overflowY: "scroll",
     padding: "16px",
     display: "flex",
@@ -33,13 +34,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
       width: "100% !important",
     },
   },
+  
   title: {
     fontStyle: "normal",
     fontFamily: "Montserrat",
     fontWeight: 600,
     fontSize: "20px",
     lineHeight: "50px",
-    color: "#E57461",
+    color: "#55727e",
   },
   mainContainer: {
     padding: "0px 50px",
@@ -132,7 +134,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   importLetter: {
-    color: "#00000070",
+    color: "#000",
     fontFamily: "Lato",
     fontSize: "14px",
     fontWeight: 400,
@@ -142,4 +144,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "100%",
   },
-}));
+  inLine:{
+    display:"flex",
+  },
+})
+);

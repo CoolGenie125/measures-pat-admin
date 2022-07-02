@@ -57,7 +57,7 @@ export default function ActionDropDown({
                 top: top,
                 right: 0,
                 minWidth: "150px",
-                background: "#1A1F37",
+                background: "#eeeeee",
                 borderRadius: "15px",
                 zIndex: 10,
                 padding: "10px 0",

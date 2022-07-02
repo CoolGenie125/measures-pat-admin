@@ -1,10 +1,9 @@
 import { useStyles } from "./TableContentStyles";
-import { TableRow, TableCell } from "@material-ui/core";
+import { TableRow, TableCell, Checkbox } from "@material-ui/core";
 import clsx from "clsx";
 import TableRoot from "components/Table/TableBase/TableRoot";
 import { useState } from "react";
 import ConfirmModal from "components/ConfirmModal/ConfirmModal";
-import ActionDropDown from "components/ActionDropDown/ActionDropDown";
 
 interface StagingTableProps {
   columns?: any;
@@ -22,9 +21,14 @@ const TableContent = ({
   const classes = useStyles();
 
   const [deleteModalStatus, setDeleteModalStatus] = useState(false);
+  const [checkBox, setCheckBox] = useState(false);
 
   const handleConfirmModalClose = () => {
     setDeleteModalStatus(false);
+  };
+
+  const handleChange = () => {
+    setCheckBox(!checkBox);
   };
 
   const handleConfirmModalOpen = () => {
@@ -57,13 +61,16 @@ const TableContent = ({
             </TableCell>
             <TableCell className={clsx(classes.tableCell)}>
               <div className={classes.action}>
-                <ActionDropDown
-                  inputData={["クライアント", "管理者", "従業員"]}>
-                  <div
-                    className={clsx(classes.actionIcon, classes.marginRight10)}>
-                    <i className='fas fa-user-edit'></i>
-                  </div>
-                </ActionDropDown>
+                <Checkbox
+                  checked={checkBox}
+                  onChange={handleChange}
+                  name='checkedB'
+                  className={classes.checkbox}
+                />
+              </div>
+            </TableCell>
+            <TableCell className={clsx(classes.tableCell)}>
+              <div className={classes.action}>
                 <div
                   className={classes.actionIcon}
                   onClick={handleConfirmModalOpen}>

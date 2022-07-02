@@ -20,6 +20,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   action: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
   },
   actionIcon: {
     "& i": {
@@ -31,5 +32,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   marginRight10: {
     marginRight: "5px",
+  },
+  checkbox: {
+    "&.MuiCheckbox-colorSecondary.Mui-checked": {
+      color: "#F59B8A",
+    },
   },
 }));
