@@ -85,7 +85,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
     },
     formTextarea: {
       width: "100% !important",
-      color: "#fff",
+      color: "#333",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 400,

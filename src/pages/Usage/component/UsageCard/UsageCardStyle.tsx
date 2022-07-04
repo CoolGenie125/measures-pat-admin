@@ -4,6 +4,7 @@ export const UsageCardStyle = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       backgroundColor: "#fff",
+      position: "relative",
       borderRadius: "10px",
       boxShadow: "30px 40px 30px rgb(0 0 0 / 10%)",
       padding: "48px",
@@ -15,9 +16,24 @@ export const UsageCardStyle = makeStyles((theme: Theme) =>
         transitionDuration: "1000ms",
       },
       [theme.breakpoints.down(440)]: {
-        padding : "24px",
+        padding: "24px",
         transitionDelay: "300ms",
         transitionDuration: "1000ms",
+      },
+      "&:hover #tool": {
+        display: "flex",
+      },
+    },
+    toolRoot: {
+      position: "absolute",
+      right: 20,
+      top: 20,
+      display: "none",
+      "& i": {
+        marginLeft: "10px",
+        cursor: "pointer",
+        fontSize: "15px",
+        lineHeight: "15px",
       },
     },
     title: {

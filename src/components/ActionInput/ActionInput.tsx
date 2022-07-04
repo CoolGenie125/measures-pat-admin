@@ -15,8 +15,8 @@ export default function ActionInput({
   placeholder,
   value,
   action,
-  disable,
   type,
+  disable,
 }: ActionInputProps) {
   const classes = ActionInputStyles();
 

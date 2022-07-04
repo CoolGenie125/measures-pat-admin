@@ -105,7 +105,7 @@ export const AccountSettingStyles = makeStyles((theme: Theme) =>
     },
     formTextarea: {
       width: "100% !important",
-      color: "#fff",
+      color: "#333",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 400,
@@ -127,7 +127,7 @@ export const AccountSettingStyles = makeStyles((theme: Theme) =>
         fontWeight: 400,
         lineHeight: 1.4,
         letterSpacing: "0.05em",
-        color: "#ffffff70",
+        color: "#E8E8E8",
         opacity: 1 /* Firefox */,
       },
       "&:focus-visible":{
