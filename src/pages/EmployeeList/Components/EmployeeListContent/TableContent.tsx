@@ -48,9 +48,6 @@ const TableContent = ({
               {row.name}
             </TableCell>
             <TableCell className={clsx(classes.tableCell)}>
-              {row.company}
-            </TableCell>
-            <TableCell className={clsx(classes.tableCell)}>
               {row.companyemail}
             </TableCell>
             <TableCell className={clsx(classes.tableCell)}>

@@ -1,5 +1,5 @@
 import ActionTable from "components/Table/ActionTable";
-import { clientListArray } from "config/constant";
+import { employeeListArray } from "config/constant";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TableContent from "./Components/EmployeeListContent/TableContent";
@@ -8,7 +8,6 @@ import { useStyles } from "./EmployeeListStyles";
 export const tableHeader = [
   "No",
   "名前",
-  "会社名",
   "会社のメール",
   "個人的なメール",
   "電話",
@@ -44,12 +43,12 @@ export const EmployeeList = () => {
           className={classes.tableRoot}
           handlePgNum={handlePgNum}
           handlePgRows={handlePgRows}
-          totalCnt={clientListArray?.length}
+          totalCnt={employeeListArray?.length}
           PgNum={currentPage}
           PgRows={perPage}
           tableContent={
             <TableContent
-              rows={clientListArray}
+              rows={employeeListArray}
               pageNumber={currentPage}
               perPageNumber={perPage}
               columns={tableHeader}
