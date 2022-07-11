@@ -11,7 +11,6 @@ import { ErrorRoute } from "pages/ErrorRoute/ErrorRoute";
 import { EmployeeList } from "pages/EmployeeList/EmployeeList";
 import { Contact } from "pages/Contact/Contact";
 import { Usage } from "pages/Usage/Usage";
-import { UsageAdd } from "pages/Usage/UsageAdd/UsageAdd";
 import { Login } from "pages/Login/Login";
 import { Register } from "pages/Register/Register";
 
@@ -30,7 +29,6 @@ export default function Layout() {
           <Route path='/account/setting' element={<AccountSetting />} />
           <Route path='/list' element={<EmployeeList />} />
           <Route path='/usage' element={<Usage />} />
-          <Route path='/usage/add' element={<UsageAdd />} />
           <Route path='/inquiry' element={<Contact />} />
           <Route path='/404' element={<ErrorRoute />} />
           <Route path='/thankyou' element={<ThankYou />} />
