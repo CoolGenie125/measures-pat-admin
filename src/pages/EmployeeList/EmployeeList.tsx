@@ -1,3 +1,6 @@
+/** @format */
+
+import ActionInput from "components/ActionInput/ActionInput";
 import ActionTable from "components/Table/ActionTable";
 import { employeeListArray } from "config/constant";
 import { useState } from "react";
@@ -11,13 +14,14 @@ export const tableHeader = [
   "会社のメール",
   "個人的なメール",
   "電話",
-  "アクティブ",
-  "消去",
+  "無効化を/有効化",
 ];
 
 export const EmployeeList = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+
+  const [search, setSearch] = useState("");
 
   //-----------pagination function------------------------
   const [currentPage, setCurrentPage] = useState(0);
@@ -38,6 +42,20 @@ export const EmployeeList = () => {
         <div className={classes.clientListTitle}>従業員リスト</div>
         <div className={classes.clientListSmallTitle}>
           以下は従業員のリストです。
+        </div>
+        <div className={classes.serachContainer}>
+          <div className={classes.searchRoot}>
+            <span className={classes.searchTitle}>探す:</span>
+            <ActionInput
+              className={classes.searchInput}
+              value={search}
+              placeholder='xxx-xxx'
+              action={(e) => setSearch(e.target.value)}
+            />
+            <div className={classes.searchBtn}>
+              <i className='fas fa-search'></i>
+            </div>
+          </div>
         </div>
         <ActionTable
           className={classes.tableRoot}

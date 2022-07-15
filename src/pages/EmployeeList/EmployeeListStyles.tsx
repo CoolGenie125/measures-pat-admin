@@ -1,3 +1,5 @@
+/** @format */
+
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme: Theme) =>
@@ -84,10 +86,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         transitionDuration: "1000ms",
       },
     },
-    tableRoot: {
-      marginTop: "50px",
-    },
-    
+    tableRoot: {},
     tableTool: {
       display: "flex",
       justifyContent: "right",
@@ -114,6 +113,49 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     backHomeBtn: {
       margin: "50px auto 0 auto",
+    },
+    serachContainer: {
+      display: "flex",
+      justifyContent: "right",
+    },
+    searchRoot: {
+      display: "flex",
+      alignItems: "center",
+      marginBottom: "20px",
+      justifyContent: "right",
+      width: "fit-content",
+      border: "1px solid #eee",
+      borderRadius: "4px",
+    },
+    searchTitle: {
+      color: "#000",
+      fontFamily: "ヒラギノ角ゴ W6 JIS2004",
+      fontSize: "18px",
+      fontWeight: 600,
+      height: "auto",
+      lineHeight: 1.4,
+      margin: "0 10px",
+      minWidth: "50px",
+    },
+    searchInput: {
+      border: "none",
+    },
+    searchBtn: {
+      minWidth: "50px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#F59B8A",
+      height: "51px",
+      borderBottomRightRadius: "4px",
+      borderTopRightRadius: "4px",
+      cursor: "pointer",
+      "& i": {
+        color: "#fff",
+      },
+      "&:hover": {
+        opacity: 0.8,
+      },
     },
   })
 );

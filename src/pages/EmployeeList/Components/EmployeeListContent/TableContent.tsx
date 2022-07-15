@@ -4,6 +4,7 @@ import clsx from "clsx";
 import TableRoot from "components/Table/TableBase/TableRoot";
 import { useState } from "react";
 import ConfirmModal from "components/ConfirmModal/ConfirmModal";
+import ActionSwitch from "components/ActionSwitch/ActionSwitch";
 
 interface StagingTableProps {
   columns?: any;
@@ -27,13 +28,25 @@ const TableContent = ({
     setDeleteModalStatus(false);
   };
 
-  const handleChange = () => {
-    setCheckBox(!checkBox);
-  };
-
   const handleConfirmModalOpen = () => {
     setDeleteModalStatus(true);
   };
+    //------------switch test function------------
+    const [switchConfirm, setSwitchConfirm] = useState(false);
+    const [switchStatus, setSwitchStatus] = useState(false);
+  
+    const handleTestSwitch = () => {
+      setSwitchConfirm(true);
+    };
+  
+    const handleSwitchConfirmClose = () => {
+      setSwitchConfirm(false);
+    };
+  
+    const handleSwitchConfirm = () => {
+      setSwitchStatus(!switchStatus);
+      setSwitchConfirm(false);
+    };
 
   const tableRows =
     rows !== undefined ? (
@@ -58,12 +71,7 @@ const TableContent = ({
             </TableCell>
             <TableCell className={clsx(classes.tableCell)}>
               <div className={classes.action}>
-                <Checkbox
-                  checked={checkBox}
-                  onChange={handleChange}
-                  name='checkedB'
-                  className={classes.checkbox}
-                />
+                <ActionSwitch status={switchStatus} action={handleTestSwitch} />
               </div>
             </TableCell>
             <TableCell className={clsx(classes.tableCell)}>
@@ -89,10 +97,19 @@ const TableContent = ({
       )}
       <ConfirmModal
         title='ユーザーアカウントを削除する'
-        description='この従業員アカウントを削除してもよろしいですか？'
+        description='このユーザーアカウントを本当に削除しますか？'
         show={deleteModalStatus}
         onClose={handleConfirmModalClose}
         action={() => {}}
+      />
+      <ConfirmModal
+        title='有効化・無効化を'
+        description={`〇〇（名前、会社名、サービス名など）${
+          switchStatus ? "有効化" : "を無効化"
+        }しますか？`}
+        show={switchConfirm}
+        onClose={handleSwitchConfirmClose}
+        action={handleSwitchConfirm}
       />
     </>
   );
